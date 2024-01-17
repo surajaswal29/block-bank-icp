@@ -19,9 +19,11 @@
   border-radius: 10px;
   /* box-shadow: 1px 1px 20px #cacbcc; */
 }
-.w-full{
+.loader{
   width: 100%;
-  margin-top: 10px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
 }
 .form-wrap .logo-header {
   width: 100%;
@@ -35,10 +37,10 @@
   object-fit: contain;
 }
 .form-wrap .current-balance {
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
   padding: 15px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
 }
 .form-wrap .current-balance h1 {
   font-size: 16px;
@@ -55,7 +57,7 @@
 .user-actions .field-1,
 .user-actions .field-2 {
   width: 100%;
-  padding: 10px 0px;
+  padding: 8px 0px;
 }
 input {
   width: 100%;
@@ -86,7 +88,7 @@ input:focus {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  background-color: #5adc5a;
+  background-color: #22bb22;
   color: #fff;
   font-weight: 600;
   border-radius: 4px;
@@ -96,5 +98,5 @@ input:focus {
   cursor: pointer;
 }
 .field-action button:hover {
-  background-color: #22c922;
+  background-color: #1cad1c;
 }

@@ -29,8 +29,6 @@ document.querySelector("form").addEventListener("submit", async (e)=>{
     
       loading = true;
 
-      document.getElementById("loader").innerText = "loading..."
-
       const addInput = parseFloat(document.getElementById("add-money-input").value);
       const withdrawInput = parseFloat(document.getElementById("withdraw-money-input").value);
       const button_ele = e.target.querySelector("#finalise-transaction-button");
@@ -38,12 +36,16 @@ document.querySelector("form").addEventListener("submit", async (e)=>{
       button_ele.setAttribute("disbaled", true)
 
       if(document.getElementById("add-money-input").value.length !== 0){
+        document.getElementById("loader").innerText = "Adding money..."
         await dbank_backend.updateUserBalance(addInput)
       }
       
       if(document.getElementById("withdraw-money-input").value.length !== 0){
+        document.getElementById("loader").innerText = "Withdrawing money..."
         await dbank_backend.withdrawUserBalance(withdrawInput)
       }
+
+      await dbank_backend.calCompoundInterest()
 
       const currentBalance = await dbank_backend.checkBalance();
 
@@ -52,6 +54,12 @@ document.querySelector("form").addEventListener("submit", async (e)=>{
 
       button_ele.removeAttribute("disbaled")
 
+      document.getElementById("add-money-input").value = ""
+      document.getElementById("withdraw-money-input").value = ""
+
+
       document.getElementById("current-balance-amount").innerText = Math.round(currentBalance * 100) / 100;
+
+      e.target.reset()
   }
 })

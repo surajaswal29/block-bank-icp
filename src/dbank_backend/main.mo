@@ -64,7 +64,7 @@ actor DBank {
   };
 
 
-  public func calCompoundInterest(){
+  public func calCompoundInterest() : async() {
     let current_time = Time.now();
     let time_elapsed_NS = current_time - start_time;
     let time_elapsed_S = time_elapsed_NS / 1000000000;
