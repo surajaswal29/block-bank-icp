@@ -1,37 +1,100 @@
-body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
-
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(242, 197, 138);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-form {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    flex-flow: row wrap;
-    max-width: 40vw;
-    margin: auto;
-    align-items: baseline;
+.container .form-wrap {
+  width: 30vw;
+  /* height: 500px; */
+  background-color: #fff;
+  border-radius: 10px;
+  /* box-shadow: 1px 1px 20px #cacbcc; */
 }
-
-button[type="submit"] {
-    padding: 5px 20px;
-    margin: 10px auto;
-    float: right;
+.w-full{
+  width: 100%;
+  margin-top: 10px;
 }
-
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
+.form-wrap .logo-header {
+  width: 100%;
+  height: 80px;
+  /* border: 1px solid #000; */
+  border-bottom: 1px solid #cacbcc;
 }
-
-#greeting:empty {
-    display: none;
+.form-wrap .logo-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.form-wrap .current-balance {
+  margin-top: 1.8rem;
+  padding: 15px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form-wrap .current-balance h1 {
+  font-size: 16px;
+}
+.user-actions {
+  padding: 30px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.user-actions .field-1,
+.user-actions .field-2 {
+  width: 100%;
+  padding: 10px 0px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #a0a1a2;
+  border-radius: 5px;
+}
+input:focus {
+  outline: none;
+  border: 1px solid rgb(9, 168, 236);
+}
+.input-button {
+  width: 20%;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: rgb(30, 98, 233);
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+.input-button:hover {
+  background-color: rgb(61, 119, 234);
+}
+.field-action button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #5adc5a;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.field-action button:hover {
+  background-color: #22c922;
 }

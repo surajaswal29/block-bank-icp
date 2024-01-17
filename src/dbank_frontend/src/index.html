@@ -2,23 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>dbank</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Bank</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
+    <div class="container">
+      <div class="form-wrap">
+        <div class="logo-header">
+          <img src="/logo.png" alt="Block Bank Logo" id="bank-logo" />
+        </div>
+        <div class="current-balance">
+          <h1>Current balance: ₹ <span id="current-balance-amount">1000</span></h1>
+        </div>
+        <div class="w-full flex">
+          <span id="loader"></span>
+        </div>
+        <div class="user-actions">
+          <form action="#">
+            <div class="field-1">
+              <label for="add-money">Add Money</label> <br />
+              <div class="flex">
+                <input type="text" placeholder="Enter amount" id="add-money-input" />
+                <!-- <button class="input-button" id="add-money-button">Add</button> -->
+              </div>
+            </div>
+            <div class="field-2">
+              <label for="withdraw-money">Withdraw Money</label> <br />
+              <div class="flex">
+                <input type="text" placeholder="Enter amount" id="withdraw-money-input" />
+                <!-- <button class="input-button" id="withdraw-money-button">Withdraw</button> -->
+              </div>
+            </div>
+            <div class="field-action">
+              <button id="finalise-transaction-button" type="submit">Finalize Transaction</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
